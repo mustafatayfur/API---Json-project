@@ -40,5 +40,14 @@ const apiRegister = async () => {
         body : JSON.stringify(bodyData),
         hesaders : {"Content-Type" : "application/json"}
     })
-    .then
+    .then((response) => response.json())
+    .then((jsonResponse)=>{
+        console.log(jsonResponse);
+        if (jsonResponse.id ==undefined){
+            alert(jsonResponse.error);
+            removeLoading();
+        }else{
+            
+        }
+    })
 }
