@@ -35,5 +35,10 @@ const apiRegister = async () => {
     }
     console.log(bodyData);
     console.log(JSON.stringify(bodyData));
-    await fetch("");
+    await fetch("https://regres.in/api/register", {
+        method : "POST",
+        body : JSON.stringify(bodyData),
+        hesaders : {"Content-Type" : "application/json"}
+    })
+    .then
 }
