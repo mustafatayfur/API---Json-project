@@ -47,7 +47,13 @@ const apiRegister = async () => {
             alert(jsonResponse.error);
             removeLoading();
         }else{
-            
+            removeLoading();
+            localStorage.setItem("tokenKey", EncryptStringAES(jsonResponse.token));
+            window.location.href("userList.html")
         }
+    })
+    .catch((error)=>{
+        alert(error);
+        removeLoading();
     })
 }
