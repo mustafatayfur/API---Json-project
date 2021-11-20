@@ -1,4 +1,4 @@
-﻿function EncryptStringAES(text) {
+﻿﻿function EncryptStringAES(text) {
     if (text != null) {
         var key = CryptoJS.enc.Utf8.parse('8080808080808080');
         var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
@@ -35,4 +35,12 @@ function DecryptStringAES(text) {
     else {
 
     }
+}
+
+const showLoading = () => {
+    loading.style.display = "block";
+}
+
+const removeLoading = () => {
+    loading.style.display = "none";
 }
