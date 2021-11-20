@@ -28,7 +28,6 @@ submitBtn.addEventListener("click", (e) =>{
     apiRegister();
 });
 
-
 const apiRegister = async ()=> {
     const bodyData = {
         email : email.value,
@@ -38,8 +37,20 @@ const apiRegister = async ()=> {
         url : "https://regres.in/api/register",
         data : bodyData,
         method : "post"
+    })
+    .then(response => response.data)
+    .catch(error => {
+        alert(error);
+        showLoading();
     });
-    console.log(response);
+    if(response.token == undefined){
+        alert(response.error);
+        removeLoading();
+    }else{
+        removeLoading(;
+            localStorage.setItem
+    }
+    console.log(response.token);
 }
 
 
