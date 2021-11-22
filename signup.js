@@ -54,7 +54,6 @@ const apiRegister = async () => {
         window.location.href = "userList.html";
     }
 }
-
 // const apiRegister = async () => {
 //     const bodyData = {
 //         email : email.value,
